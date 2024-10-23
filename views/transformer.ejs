@@ -1,0 +1,46 @@
+<%- include('partials/header.ejs') %>
+    <main>
+      <div class="toppart">
+      Transformers
+      </div>
+      <div class="sections">
+        <h2>Introduction and Overview</h2>
+        <cite>Source: </cite><a href="https://www.turing.com/kb/brief-introduction-to-transformers-and-their-power">Turing.com</a>
+        <p>
+          Transformers are a type of neural network that learn by analyzing input data and gleaning both context and understanding through a parallel analysis of the given data input (typically text). Unlike other models, Transformers can apply previously understood context, such as a characters name and description, to later aspects of the data, such as the character being too short to reach the top shelf in a cabinet. 
+        </p>
+        <p>
+          At their foundation, Transformers translate everything into numerical values, represented as <strong>embeddings</strong>. It's the analysis of these embeddings which offer up the probabalistic outputs (guesses) for things like next likely word or punctuation. Transformers introduce the concept of "multi-head attention", which allow the models to process and compare data much faster than other models.    
+      </div>
+      <div class="sections">
+        <h2>The Transformer Encoder and Decoder</h2>
+        <img src="/img/transformer_decoder.avif" alt="transformer encoder decoder">
+        <p>
+          At its heart, a transformer has both an encoder and a decoder. The encoder consists of a specified number of layers. The layers are used to process and compare words (or word segments). Since transformers do not have sequential processing, positional embeddings must also be past in to provide a weighting mechanism for the location of each word. All words processed by the encoder are processed by each of the layers, though with their own weights and biases. The output of the encoder can be thought of as a trained numerical model of the input data, such as if looking for an English to Spanish translator. 
+        </p>
+        <p>
+          Decoders are similar to encoders, but instead of examining all data, they only examine the data that has been provided so far (such as when attempting to predict the next word in a sentence). The analysis at most of the encoder and decoder areas relies on matrix multiplication. Because matrices can be analyzed in parallel, these analyses are performed rapidly across systems with parallel computing functionality (such as on GPUs).
+        </p>
+      </div>
+      <div class="sections">
+        <h2>Transformer Neural Network</h2>
+        <p>
+          So how do the components of a transformer create the neural network we rely on for ChatGPT? By encoding each word with the contextual awareness of the surrounding words, such self-attention allows the transformer to differentiate between orange the color and orange the fruit. A transformer can also perform previously daunting AI tasks such as translating 'it' into the proper gender in French or Spanish. 
+        </p>
+      </div>
+      <div class="sections">
+        <h2>Use Cases</h2>
+          As mentioned, transformers are ideal for any tasks in which context and global understanding is required. The two primary use cases for transformers include: 
+          <ul>
+            <li ><span class="types">Natural Language Processors:</span> such as ChatGPT and Google's Gemeni. These processors can interface with users as though they are interacting with a real person. In fact, the NLP capabilities of ChatGPT extend far beyond simple chatbots and can begin to perform tasks such as mathematical and legal analysis. </li>
+            <li><span class="types">Language Translation:</span> while translation is something most modern chat agents can perform, transformers are especially suited for such language translation tasks due to their abilty to pick up on minute context. </li>
+          </ul>
+      </div>
+      <div class="container--shortline">
+        <div class="shortline"></div>
+      </div>
+      <div class="bottompart">
+      <a href="/index">Return Home</a>
+      </div>
+    </main>
+<%- include('partials/footer.ejs') %>

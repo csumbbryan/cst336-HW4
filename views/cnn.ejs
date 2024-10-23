@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') %>
+    <main>
+      <div class="toppart">
+      Convolutional Neural Networks
+      </div>
+      <div class="sections">
+        <h2>Introduction and Overview</h2>
+        <cite>Source: </cite><a href="https://www.mathworks.com/discovery/convolutional-neural-network.html">Mathworks.com</a>
+        <p>
+          Convolutional Neural Networks (CNNs) excel at image recognition and analysis. CNNs are initially trained from a large set of images with tags for images that do or do not have certain features. After thousands, millions, or even billons of images, CNNs are able to tightly correlate which images have which features, and where in the image those features exist. For this reason, CNNs are best able to extract distinct features from images, even features that trained professionals may be unable to detect. 
+        </p>
+      </div>
+      <div class="sections">
+        <h2>Advanced Explanation</h2>
+        <img src="img/1710246098112.jpg" alt="CNN">
+        <p>
+          A CNN consists of a series of layers, with most having at least three: the convolution layer, the Rectified linur unit, and the pooling layer. Each of these layers can be applied at different resolutions to allow for more complex features to be extracted from the image.
+        </p>
+        <p>
+          Unlike Rcurrent Neural Networks, every "neuron" in a CNN has the same weight and bias. This simplifies the training process, and results in all neurons detecting the same feature at a given training iteration. This ensures that no matter where features exist within an image, that feature will be detected. 
+        </p>
+        <p>
+          The final step in the CNN is classification, where the output of the CNN is compared to a set of labels and outputs the probability of each one. This is done by taking the softmax function, which normalizes the output to a probability distribution.
+        </p>
+      </div>
+      <div class="sections">
+        <h2>Use Cases</h2>
+          <ul>
+            <li><span class="types">Medical Imaging: </span> X-rays, MRIs, and CT scans can be analyzed by CNNs to determine medical conditions. This a field where amazingly, some studies have shown CNNs to be better than trained medical experts at identifying key objects like cancer cells. </li>
+            <li><span class="types">Audio Processing: </span> while not visual, audio signals can be expressed visually and analyzed via CNNs. Then keywords can be detected even in situations where noise is present.</li>
+            <li><span class="types">Object Detection: </span> a core capability of CNNs, this is how AI can detect a car or a person, or even a specific person, within an image. </li>
+            <li><span class="types">Synthetic Data Generation: </span> shifting to the output side of CNNs, when tied in with Generative Adversarial Networks (GANs), CNNs can be used to create images for various use cases, such as automated driving and face recognition.</li>
+          </ul>
+      </div>
+      <div class="container--shortline">
+        <div class="shortline"></div>
+      </div>
+      <div class="bottompart">
+        <em>Next: </em><a href="/rnn">Recurrent Neural Networks</a>
+      </div>
+    </main>
+  <%- include('partials/footer.ejs') %>

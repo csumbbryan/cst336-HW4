@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+    <main>
+      <div class="toppart">
+      Recurrent Neural Networks
+      </div>
+      <div class="sections">
+        <h2>Introduction and Overview</h2>
+          <cite>Source: </cite><a href="https://www.mathworks.com/discovery/rnn.html">Mathworks.com</a> <br>
+        <img src="img/1712230641635.jpg" alt="RNN">
+        <p>
+          A recurrent neural network (RNN) is a type of neural network that uses past data to influence future output and prediction. The output of one "neuron" is the fed in as the input to the next neuron. Each neuron is then assigned a weight that is determined during training. Once training is complete, a set of data is fed into the RNN and with the given weights in place, calculations are performed to determine the output. 
+        </p>
+        <p>
+          Unfortunately, this sequential input and output chaining results in a problem known as "vanishing" or "exploding" gradients. In situations were the weights are less than 1, they multiply toward 0 and in situations where the weights are greater than 1, they can increase exponentially. To translate this from math into its conceptual idea, the RNN suffers from a narrow context window, with any value beyond a given number of neurons no longer influencing the current neuron's output. 
+        </p>
+      <div class="sections">
+        <h2>LSTM</h2>
+        <p>
+          To solve the issue with vanishing or exploding gradients, a sub-algorithm, developers introduced (Long Short Term Memory). This special type of RNN introduces a mechanism which allows selectivity in how the hidden state and output state are brought to the next step. 
+        </p>
+        <p>
+          There also exists a bi-directional LSTM which can learn dependencies between time steps within a time series.
+        </p>
+      </div>
+      <div class="sections">
+        <h2>Use Cases</h2>
+          <ul>
+            <li><span class="types">Signal Processing: </span> since signals are usually sequencial data, RNNs allow classification and regression to be run against data in real time.</li>
+            <li><span class="types">Text Analytics: </span> while not as popular as their Transformer cousin in the modern AI landscape, RNNs, especially LTSM based RNN, are great at text analysis and classification.</li>
+          </ul>
+      </div>
+      </div>
+      <div class="container--shortline">
+        <div class="shortline"></div>
+      </div>
+      <div class="bottompart">
+        <em>Next: </em><a href="/transformer">Transformers</a>
+      </div>
+    </main>
+  <%- include('partials/footer.ejs') %>
